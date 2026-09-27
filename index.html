@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMAurora - Sistemas de Cámaras de Seguridad en San Cristóbal, Táchira</title>
+    <meta name="description" content="Venta e instalación profesional de sistemas de cámaras de seguridad CCTV y WiFi en San Cristóbal, Táchira. Protege tu hogar y negocio con visión nocturna y respaldo de energía.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0a0f1d',
+                            950: '#05070e',
+                        },
+                        brand: {
+                            blue: '#0284c7',
+                            cyan: '#06b6d4',
+                            emerald: '#10b981',
+                            accent: '#38bdf8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom animations & fine details */
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.03); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 3s infinite ease-in-out;
+        }
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(1000%); }
+        }
+        .scanline-effect::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: rgba(6, 182, 212, 0.4);
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.8);
+            animation: scanline 4s linear infinite;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(6, 182, 212, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-brand-cyan selection:text-navy-950 overflow-x-hidden">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-blue via-indigo-600 to-cyan-600 text-xs sm:text-sm text-white font-medium py-2 px-4 text-center flex justify-center items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>🛡️ <strong>Atención Inmediata en San Cristóbal y Táchira:</strong> ¡Diagnóstico y visita técnica de factibilidad GRATIS en la zona metropolitana!</span>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-navy-900/90 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-cyan p-0.5 shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all">
+                        <div class="w-full h-full bg-navy-950 rounded-[10px] flex items-center justify-center">
+                            <i class="fa-solid fa-video text-brand-cyan text-xl group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold tracking-tight text-white flex items-center gap-1">
+                            GMAurora <span class="text-xs px-2 py-0.5 bg-brand-cyan/20 text-brand-cyan rounded-full border border-brand-cyan/30">Seguridad</span>
+                        </span>
+                        <span class="text-[10px] text-slate-400 font-medium tracking-wider uppercase">Sistemas de Videovigilancia • Táchira</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Items -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#inicio" class="hover:text-brand-cyan transition-colors">Inicio</a>
+                    <a href="#servicios" class="hover:text-brand-cyan transition-colors">Servicios</a>
+                    <a href="#demo" class="hover:text-brand-cyan transition-colors flex items-center gap-1.5 text-brand-cyan"><i class="fa-solid fa-bolt text-xs"></i> Demo en Vivo</a>
+                    <a href="#cotizador" class="hover:text-brand-cyan transition-colors">Cotizador</a>
+                    <a href="#galeria" class="hover:text-brand-cyan transition-colors">Galería</a>
+                    <a href="#paquetes" class="hover:text-brand-cyan transition-colors">Planes</a>
+                    <a href="#faq" class="hover:text-brand-cyan transition-colors">Preguntas</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="https://instagram.com/gmaurora" target="_blank" rel="noopener noreferrer" class="p-2.5 text-slate-400 hover:text-pink-400 hover:bg-slate-800/60 rounded-lg transition-all" title="Instagram @gmaurora">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/584247491071?text=Hola%20GMAurora,%20quiero%20solicitar%20una%20asesor%C3%ADa%20gratuita%20para%20c%C3%A1maras%20de%20seguridad" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-lg shadow-emerald-600/20 hover:shadow-emerald-600/40 transition-all hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Cotizar por WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 focus:outline-none" aria-label="Abrir Menú">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-cyan">Inicio</a>
+            <a href="#servicios" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-cyan">Servicios</a>
+            <a href="#demo" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-cyan hover:bg-slate-800">Demo Interactiva HD</a>
+            <a href="#cotizador" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-cyan">Cotizador Instantáneo</a>
+            <a href="#galeria" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-cyan">Galería de Instalaciones</a>
+            <a href="#paquetes" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-cyan">Planes y Precios</a>
+            <a href="#faq" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-cyan">Preguntas Frecuentes</a>
+            <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
+                <a href="https://wa.me/584247491071?text=Hola%20GMAurora,%20quiero%20informaci%C3%B3n" target="_blank" class="w-full text-center bg-emerald-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Contactar +58 424-7491071
+                </a>
+                <a href="https://instagram.com/gmaurora" target="_blank" class="w-full text-center bg-slate-800 text-slate-200 py-3 rounded-xl font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-instagram text-lg text-pink-500"></i> Síguenos @gmaurora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
+        <!-- Background Ambient Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-brand-cyan text-xs font-semibold tracking-wide">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Instalación Profesional en San Cristóbal y Táchira</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15]">
+                        Protege tu hogar y negocio con <span class="bg-gradient-to-r from-brand-cyan via-sky-400 to-indigo-400 bg-clip-text text-transparent">Cámaras de Alta Definición</span> 24/7
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Monitorea tu propiedad en tiempo real desde tu teléfono, laptop o tablet. Contamos con <strong>sistemas con respaldo de energía batería/UPS</strong> diseñados especialmente para adaptarse a las condiciones de luz e internet de San Cristóbal.
+                    </p>
+
+                    <!-- Features Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left max-w-lg mx-auto lg:mx-0 text-xs sm:text-sm text-slate-300">
+                        <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
+                            <i class="fa-solid fa-mobile-screen text-brand-cyan"></i>
+                            <span>App en vivo gratis</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
+                            <i class="fa-solid fa-moon text-indigo-400"></i>
+                            <span>Visión nocturna color</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-lg border border-slate-800 col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-battery-full text-emerald-400"></i>
+                            <span>Respaldo anti-apagón</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Call to Actions -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/584247491071?text=Hola%20GMAurora,%20quiero%20cotizar%20un%20sistema%20de%20c%C3%A1maras%20para%20mi%20casa/negocio" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base rounded-xl shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Solicitar Cotización Gratis</span>
+                        </a>
+                        <a href="#cotizador" class="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-base rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calculator text-brand-cyan"></i>
+                            <span>Calcular Presupuesto</span>
+                        </a>
+                    </div>
+
+                    <!-- Local Trust Proof -->
+                    <div class="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-400 text-xs">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-rose-500 text-sm"></i>
+                            <span>Cobertura: San Cristóbal, Táriba, Cordero, Palmira, Cárdenas y zonas aledañas.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Simulated Live Camera Frame -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        
+                        <!-- Glowing Card Border Container -->
+                        <div class="relative rounded-2xl bg-gradient-to-b from-slate-700 to-slate-900 p-1 shadow-2xl shadow-cyan-900/30">
+                            
+                            <!-- Simulated Camera View Header -->
+                            <div class="bg-navy-900 rounded-t-xl px-4 py-3 flex items-center justify-between border-b border-slate-800">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                                    <span class="text-xs font-mono font-bold text-slate-200">CAM-01 • SAN CRISTÓBAL RESIDENCIAL</span>
+                                </div>
+                                <span class="text-[10px] bg-slate-800 text-slate-300 font-mono px-2 py-0.5 rounded">4K 60FPS</span>
+                            </div>
+
+                            <!-- Live Feed Screen Placeholder -->
+                            <div class="relative bg-slate-900 aspect-video sm:aspect-[4/3] rounded-b-xl overflow-hidden scanline-effect group">
+                                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=80" alt="Cámara de Seguridad Monitoreo San Cristóbal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80">
+                                
+                                <!-- OSD Overlay -->
+                                <div class="absolute inset-0 p-4 flex flex-col justify-between pointer-events-none bg-gradient-to-t from-navy-950/80 via-transparent to-navy-950/40">
+                                    <div class="flex justify-between items-start">
+                                        <div class="text-[11px] font-mono text-emerald-400 bg-black/60 backdrop-blur px-2 py-1 rounded border border-emerald-500/30 flex items-center gap-1.5">
+                                            <i class="fa-solid fa-record-vinyl animate-spin text-rose-500"></i>
+                                            <span>GRABANDO HD • GMAURORA CLOUD</span>
+                                        </div>
+                                        <div class="text-right text-[10px] font-mono text-slate-300 bg-black/60 backdrop-blur px-2 py-1 rounded">
+                                            <div id="hero-clock">10:42:15 AM</div>
+                                            <div class="text-slate-400">ONLINE • UPS BATERÍA 100%</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Motion Bounding Box Simulation -->
+                                    <div class="self-center border-2 border-brand-cyan/80 bg-brand-cyan/10 p-4 rounded-lg flex flex-col items-center justify-center text-center animate-pulse">
+                                        <span class="text-[11px] font-mono font-bold text-brand-cyan bg-navy-900/90 px-2 py-0.5 rounded border border-brand-cyan/40">DETECCIÓN DE MOVIMIENTO DE PRECISIÓN</span>
+                                    </div>
+
+                                    <div class="flex justify-between items-end text-[11px] font-mono text-slate-300">
+                                        <span class="bg-black/60 px-2 py-1 rounded">App Móvil Conectada</span>
+                                        <span class="bg-emerald-500/20 text-emerald-300 px-2 py-1 rounded border border-emerald-500/40"><i class="fa-solid fa-wifi text-xs"></i> 5G / WiFi Activo</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Badge Overlay -->
+                        <div class="absolute -bottom-6 -left-6 glass-card p-4 rounded-2xl border border-slate-700 shadow-xl hidden sm:flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 font-bold text-xl">
+                                <i class="fa-solid fa-check-double"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Garantía Real Local</h4>
+                                <p class="text-xs text-slate-400">Soporte técnico presencial en Táchira</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-navy-900/60 border-y border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-cyan text-sm font-bold tracking-widest uppercase">Soluciones Integrales de Seguridad</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Tecnología de Vanguardia Adaptada a Nuestra Región</h2>
+                <p class="text-slate-400 mt-4 text-base">Instalaciones limpias, ordenadas y cableado estético para casas, conjuntos residenciales, locales comerciales y fincas en Táchira.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-blue/20 border border-brand-blue/40 text-brand-cyan flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-camera-rotate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Cámaras IP y WiFi 2K / 4K</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Imágenes ultra nítidas que permiten identificar rostros y placas de vehículos con claridad. Modelos aptos para exterior con protección IP67 contra la lluvia de San Cristóbal.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Zoom óptico y rotación PTZ 360°</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Audio bidireccional (escucha y habla)</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-car-battery"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Sistemas Autónomos con UPS</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Sabemos lo crucial que es la energía en el Táchira. Configuramos respaldos de baterías inteligentes para que tus cámaras sigan grabando sin interrupción aunque se corte el fluido eléctrico.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Autonomía desde 4 hasta 24 horas</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Protección contra sobretensiones</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Monitoreo Móvil Remoto</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Configuración completa en tu smartphone (Android o iPhone). Accede desde cualquier parte de Venezuela o del mundo para ver qué sucede en tu hogar en tiempo real.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Notificaciones de alerta inmediata</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Sin cobros ni mensualidades obligatorias</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-500/20 border border-indigo-500/40 text-indigo-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Visión Nocturna Full Color</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Cámaras con focos LED integrados que convierten la oscuridad total de la noche en imágenes nítidas a todo color, permitiendo distinguir prendas y vehículos en la oscuridad.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Luces disuasivas automáticas</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Sirena integrada anti-intrusos</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-rose-500/20 border border-rose-500/40 text-rose-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-hard-drive"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Almacenamiento Local y Nube</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Grabación continua con discos duros de alta resistencia diseñados exclusivamente para videovigilancia 24/7 (Western Digital Purple / Seagate SkyHawk) o memorias MicroSD de alta velocidad.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Grabación en bucle automático (15-60 días)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Opción de respaldo seguro en nube</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="glass-card glass-card-hover p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-500/20 border border-cyan-500/40 text-brand-cyan flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Mantenimiento y Corrección</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            ¿Ya tienes cámaras instaladas que no funcionan o se desconectaron de tu teléfono? Reparamos, recableamos y reconfiguramos tu sistema existente con la mejor disposición.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Reconfiguración de routers y claves</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Cambio de conectores y fuentes dañadas</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Sandbox Section -->
+    <section id="demo" class="py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-slate-900 via-navy-900 to-slate-950 rounded-3xl border border-slate-800 p-6 sm:p-10 shadow-2xl">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Text Info -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-brand-cyan text-xs font-bold uppercase tracking-wider border border-cyan-500/30">
+                            Prueba Interactiva
+                        </span>
+                        <h2 class="text-3xl font-extrabold text-white leading-tight">
+                            Experimenta cómo funciona la tecnología GMAurora
+                        </h2>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Interactúa con nuestra pantalla de demostración. Selecciona los distintos modos para comprobar la claridad visual, el alcance en la noche y el sistema de detección inteligente que instalamos en San Cristóbal.
+                        </p>
+
+                        <!-- Control Buttons -->
+                        <div class="space-y-3 pt-2">
+                            <button onclick="setCameraMode('day')" id="btn-mode-day" class="demo-btn w-full px-4 py-3 rounded-xl bg-brand-blue text-white font-medium text-sm flex items-center justify-between transition-all">
+                                <span class="flex items-center gap-2"><i class="fa-solid fa-sun text-amber-300"></i> Modo Día HD 4K</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                            <button onclick="setCameraMode('night')" id="btn-mode-night" class="demo-btn w-full px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm flex items-center justify-between transition-all">
+                                <span class="flex items-center gap-2"><i class="fa-solid fa-moon text-indigo-400"></i> Modo Visión Nocturna Full Color</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                            <button onclick="setCameraMode('motion')" id="btn-mode-motion" class="demo-btn w-full px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm flex items-center justify-between transition-all">
+                                <span class="flex items-center gap-2"><i class="fa-solid fa-person-walking-luggage text-emerald-400"></i> Detección Humana IA + Alarma</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Camera Preview Screen -->
+                    <div class="lg:col-span-7">
+                        <div class="relative bg-slate-950 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+                            
+                            <!-- Feed Bar -->
+                            <div class="bg-slate-900 px-4 py-2.5 flex items-center justify-between text-xs text-slate-400 border-b border-slate-800">
+                                <div class="flex items-center gap-2">
+                                    <span id="demo-status-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                                    <span id="demo-status-text" class="font-mono text-slate-200">CÁMARA EXTERIOR EN VIVO</span>
+                                </div>
+                                <span class="font-mono text-cyan-400" id="demo-resolution">3840x2160 (4K UltraHD)</span>
+                            </div>
+
+                            <!-- Screen Container -->
+                            <div class="relative aspect-video bg-black overflow-hidden">
+                                <img id="demo-image" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=80" class="w-full h-full object-cover transition-all duration-500">
+                                
+                                <!-- Night Overlay (Simulated) -->
+                                <div id="demo-night-overlay" class="absolute inset-0 bg-indigo-950/40 mix-blend-multiply opacity-0 transition-opacity duration-500 pointer-events-none"></div>
+
+                                <!-- Motion Box Simulation -->
+                                <div id="demo-motion-box" class="hidden absolute top-1/4 left-1/3 w-48 h-48 border-2 border-emerald-400 bg-emerald-500/10 rounded flex flex-col justify-between p-2 animate-bounce">
+                                    <div class="bg-emerald-500 text-slate-950 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded self-start">
+                                        OBJETO: PERSONA (98.4%)
+                                    </div>
+                                    <div class="text-[9px] font-mono text-emerald-300 bg-black/70 px-1 rounded">
+                                        ALERTA ENVIADA AL TELÉFONO
+                                    </div>
+                                </div>
+
+                                <!-- Overlay OSD -->
+                                <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-[11px] font-mono bg-navy-950/80 backdrop-blur px-3 py-1.5 rounded-lg border border-slate-800">
+                                    <span class="text-slate-300" id="demo-osd-desc"><i class="fa-solid fa-circle-info text-brand-cyan"></i> Vista Diurna de Alta Claridad</span>
+                                    <span class="text-emerald-400"><i class="fa-solid fa-shield-cat"></i> GMAurora Guard v2.4</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Calculator Section -->
+    <section id="cotizador" class="py-20 bg-navy-900/40 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Cotizador Express</span>
+                <h2 class="text-3xl font-extrabold text-white mt-1">Calcula el Presupuesto Aproximado para tu Propiedad</h2>
+                <p class="text-slate-400 text-sm mt-2">Selecciona las opciones que necesitas y obtén un estimado inmediato para San Cristóbal.</p>
+            </div>
+
+            <div class="glass-card p-6 sm:p-10 rounded-3xl border border-slate-800 shadow-2xl">
+                <form id="calc-form" onsubmit="return false;" class="space-y-8">
+                    
+                    <!-- Property Type -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-200 mb-3">1. ¿Qué tipo de propiedad deseas proteger?</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <label class="calc-option cursor-pointer p-4 rounded-xl bg-slate-900 border-2 border-brand-blue flex items-center gap-3 transition-all" onclick="selectProperty(this, 'Casa / Residencia')">
+                                <input type="radio" name="property" value="casa" checked class="hidden">
+                                <i class="fa-solid fa-house text-xl text-brand-cyan"></i>
+                                <div>
+                                    <div class="text-sm font-bold text-white">Casa / Quinta</div>
+                                    <div class="text-xs text-slate-400">Residencial</div>
+                                </div>
+                            </label>
+
+                            <label class="calc-option cursor-pointer p-4 rounded-xl bg-slate-900 border-2 border-slate-800 flex items-center gap-3 transition-all" onclick="selectProperty(this, 'Apartamento')">
+                                <input type="radio" name="property" value="apto" class="hidden">
+                                <i class="fa-solid fa-building text-xl text-slate-400"></i>
+                                <div>
+                                    <div class="text-sm font-bold text-white">Apartamento</div>
+                                    <div class="text-xs text-slate-400">Edificio</div>
+                                </div>
+                            </label>
+
+                            <label class="calc-option cursor-pointer p-4 rounded-xl bg-slate-900 border-2 border-slate-800 flex items-center gap-3 transition-all" onclick="selectProperty(this, 'Negocio / Galpón')">
+                                <input type="radio" name="property" value="negocio" class="hidden">
+                                <i class="fa-solid fa-store text-xl text-slate-400"></i>
+                                <div>
+                                    <div class="text-sm font-bold text-white">Negocio / Galpón</div>
+                                    <div class="text-xs text-slate-400">Comercial</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Camera Quantity -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-200 mb-3">2. ¿Cuántas cámaras de seguridad estimas requerir?</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                            <button type="button" onclick="setCamCount(2, this)" class="cam-btn p-3 rounded-xl bg-slate-900 border-2 border-brand-blue text-white text-center font-bold">2 Cámaras</button>
+                            <button type="button" onclick="setCamCount(4, this)" class="cam-btn p-3 rounded-xl bg-slate-900 border-2 border-slate-800 text-slate-300 text-center font-bold">4 Cámaras</button>
+                            <button type="button" onclick="setCamCount(8, this)" class="cam-btn p-3 rounded-xl bg-slate-900 border-2 border-slate-800 text-slate-300 text-center font-bold">8 Cámaras</button>
+                            <button type="button" onclick="setCamCount(16, this)" class="cam-btn p-3 rounded-xl bg-slate-900 border-2 border-slate-800 text-slate-300 text-center font-bold">16 Cámaras</button>
+                        </div>
+                    </div>
+
+                    <!-- Backup battery UPS toggle -->
+                    <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 flex items-center justify-between">
+                        <div class="space-y-1">
+                            <div class="text-sm font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-battery-charging text-amber-400"></i>
+                                <span>Incluir Sistema de Batería de Respaldo (UPS)</span>
+                            </div>
+                            <p class="text-xs text-slate-400">Recomendado para San Cristóbal para evitar apagones en la grabación.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="ups-toggle" onchange="calculateEstimate()" class="sr-only peer" checked>
+                            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500"></div>
+                        </label>
+                    </div>
+
+                    <!-- Calculated Result Display -->
+                    <div class="bg-gradient-to-r from-slate-900 via-navy-900 to-slate-900 p-6 rounded-2xl border border-brand-blue/30 text-center space-y-4">
+                        <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Estimación del Paquete Completo con Instalación</span>
+                        <div class="text-4xl sm:text-5xl font-black text-white">
+                            $<span id="calc-price-usd">180</span> <span class="text-sm font-normal text-slate-400">USD aprox.</span>
+                        </div>
+                        <p class="text-xs text-slate-400 max-w-md mx-auto">
+                            *Incluye cámaras de alta resolución, cableado profesional, configuración en smartphones y soporte local en San Cristóbal. El monto final se ajusta en la visita técnica gratuita.
+                        </p>
+
+                        <button type="button" onclick="sendWhatsAppQuote()" class="w-full sm:w-auto px-8 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-emerald-500/20 transition-all inline-flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Enviar esta Cotización por WhatsApp</span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="galeria" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-brand-cyan text-xs font-bold uppercase tracking-wider">Nuestra Experiencia</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-1">Galería de Instalaciones Reales en San Cristóbal</h2>
+                    <p class="text-slate-400 text-sm mt-2">Trabajos impecables con acabadado profesional, canaletas protectoras y máxima estética.</p>
+                </div>
+
+                <!-- Gallery Category Filter Tabs -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0">
+                    <button onclick="filterGallery('todos', this)" class="gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-brand-blue text-white">Todos</button>
+                    <button onclick="filterGallery('casas', this)" class="gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700">Casas</button>
+                    <button onclick="filterGallery('comercio', this)" class="gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700">Comercios</button>
+                    <button onclick="filterGallery('detalles', this)" class="gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700">Cableado y Rack</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item casas group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80', 'Instalación Exterior en Quinta de Pueblo Nuevo, San Cristóbal')">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="Instalación de cámaras residencial" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-left">
+                        <span class="text-[10px] font-bold text-brand-cyan uppercase bg-brand-cyan/20 px-2 py-0.5 rounded border border-brand-cyan/30">Pueblo Nuevo</span>
+                        <h4 class="text-sm font-bold text-white mt-1">Cámara IP Exterior Full HD</h4>
+                        <p class="text-xs text-slate-300">Protección de acceso principal y garaje</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item comercio group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80', 'Sistema para Local Comercial en Barrio Obrero')">
+                    <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80" alt="Cámaras de seguridad negocio San Cristóbal" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-left">
+                        <span class="text-[10px] font-bold text-amber-400 uppercase bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30">Barrio Obrero</span>
+                        <h4 class="text-sm font-bold text-white mt-1">Monitoreo de Caja y Pasillos</h4>
+                        <p class="text-xs text-slate-300">Cámaras tipo Domo con lente gran angular</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item detalles group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80', 'Organización de Rack de Comunicaciones y DVR')">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Cableado estructurado cámaras Táchira" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-left">
+                        <span class="text-[10px] font-bold text-emerald-400 uppercase bg-emerald-500/20 px-2 py-0.5 rounded border border-emerald-500/30">Cableado Profesional</span>
+                        <h4 class="text-sm font-bold text-white mt-1">Rack y Centro de Control UPS</h4>
+                        <p class="text-xs text-slate-300">Conexiones etiquetadas y protegidas</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item casas group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80', 'Conjunto Residencial en Las Lomas')">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Camaras para casas San Cristóbal" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-left">
+                        <span class="text-[10px] font-bold text-brand-cyan uppercase bg-brand-cyan/20 px-2 py-0.5 rounded border border-brand-cyan/30">Las Lomas</span>
+                        <h4 class="text-sm font-bold text-white mt-1">Perímetro Residencial PTZ</h4>
+                        <p class="text-xs text-slate-300">Rotación remota y seguimiento automático</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item comercio group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=1200&q=80', 'Galpón e Industria en Paramillo')">
+                    <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=600&q=80" alt="Camaras industriales Táchira" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-left">
+                        <span class="text-[10px] font-bold text-amber-400 uppercase bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30">Paramillo</span>
+                        <h4 class="text-sm font-bold text-white mt-1">Sistema de Videovigilancia Comercial</h4>
+                        <p class="text-xs text-slate-300">Visión nocturna de largo alcance (50 metros)</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item casas group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80', 'Instalación de Villa en Táriba')">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80" alt="Cámaras de seguridad Táriba Táchira" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-left">
+                        <span class="text-[10px] font-bold text-brand-cyan uppercase bg-brand-cyan/20 px-2 py-0.5 rounded border border-brand-cyan/30">Táriba</span>
+                        <h4 class="text-sm font-bold text-white mt-1">Cámaras WiFi Autónomas</h4>
+                        <p class="text-xs text-slate-300">Panel solar + Batería de litio integrada</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section id="paquetes" class="py-20 bg-navy-900/60 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-cyan text-xs font-bold uppercase tracking-wider">Planes Todo Incluido</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Paquetes Recomendados para San Cristóbal</h2>
+                <p class="text-slate-400 text-sm mt-2">Equipos originales de marcas reconocidas (Hikvision, Dahua, Imou, Ezviz) con garantía escrita.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Plan 1 -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all">
+                    <div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Plan Básico WiFi</div>
+                        <h3 class="text-2xl font-black text-white mt-1">Kit 2 Cámaras HD</h3>
+                        <p class="text-slate-400 text-xs mt-2">Ideal para apartamentos o entradas principales.</p>
+                        
+                        <div class="my-6">
+                            <span class="text-4xl font-black text-white">$120</span>
+                            <span class="text-xs text-slate-400"> / Instalado</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> 2 Cámaras WiFi Full HD 1080p</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Memorias MicroSD 64GB incluidas</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Configuración en 2 teléfonos celulares</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Visión Nocturna infrarroja</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Instalación estética en San Cristóbal</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/584247491071?text=Hola%20GMAurora,%20estoy%20interesado%20en%20el%20Plan%20B%C3%A1sico%20de%202%20C%C3%A1maras" target="_blank" class="mt-8 w-full py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl text-center transition-all block">
+                        Solicitar este Plan
+                    </a>
+                </div>
+
+                <!-- Plan 2 (Featured) -->
+                <div class="glass-card p-8 rounded-3xl border-2 border-brand-cyan relative flex flex-col justify-between shadow-2xl shadow-cyan-950/50 scale-105">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-blue to-brand-cyan text-slate-950 text-[10px] font-black uppercase px-4 py-1 rounded-full shadow">
+                        Más Popular en Táchira
+                    </div>
+
+                    <div>
+                        <div class="text-xs font-bold text-brand-cyan uppercase tracking-widest">Plan Residencia Pro</div>
+                        <h3 class="text-2xl font-black text-white mt-1">Kit 4 Cámaras 2K + DVR</h3>
+                        <p class="text-slate-400 text-xs mt-2">Perfecto para casas completas y pequeños negocios.</p>
+                        
+                        <div class="my-6">
+                            <span class="text-4xl font-black text-white">$260</span>
+                            <span class="text-xs text-slate-400"> / Instalado</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> 4 Cámaras 2K Visión Nocturna Color</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> DVR Grabador + Disco Duro 1TB</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> <strong>Incluye Batería UPS de respaldo</strong></li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Alarma con detección de movimiento</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Conexión para ver en Smart TV y Móvil</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/584247491071?text=Hola%20GMAurora,%20quiero%20el%20Plan%20Residencia%20Pro%20de%204%20C%C3%A1maras" target="_blank" class="mt-8 w-full py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl text-center shadow-lg shadow-emerald-500/25 transition-all block">
+                        Solicitar Plan Pro
+                    </a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all">
+                    <div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Plan Empresa & Quinta</div>
+                        <h3 class="text-2xl font-black text-white mt-1">Kit 8 Cámaras 4K Ultra</h3>
+                        <p class="text-slate-400 text-xs mt-2">Cobertura total sin puntos ciegos para amplias áreas.</p>
+                        
+                        <div class="my-6">
+                            <span class="text-4xl font-black text-white">$480</span>
+                            <span class="text-xs text-slate-400"> / Instalado</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> 8 Cámaras Ultra HD 4K metálicas</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> NVR/DVR Profesional + Disco Duro 2TB</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> UPS Regulador de Voltaje Industrial</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Micrófonos integrados e Inteligencia Artificial</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Soporte técnico prioritario 12 meses</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/584247491071?text=Hola%20GMAurora,%20me%20interesa%20el%20Plan%20Empresa%20de%208%20C%C3%A1maras" target="_blank" class="mt-8 w-full py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl text-center transition-all block">
+                        Solicitar Plan Empresa
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <span class="text-brand-cyan text-xs font-bold uppercase tracking-wider">Respuestas Claras</span>
+                <h2 class="text-3xl font-extrabold text-white mt-1">Preguntas Frecuentes en San Cristóbal</h2>
+                <p class="text-slate-400 text-sm mt-2">Aclaramos tus dudas para que tomes la mejor decisión de seguridad.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-bold text-white flex items-center justify-between hover:bg-slate-800/40 transition-colors">
+                        <span>¿Las cámaras funcionan cuando se va la energía eléctrica en San Cristóbal?</span>
+                        <i class="fa-solid fa-plus text-brand-cyan text-sm transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-sm text-slate-300 border-t border-slate-800/50 pt-3">
+                        ¡Sí! En <strong>GMAurora</strong> equipamos nuestros sistemas con fuentes de alimentación respaldadas por baterías UPS o paneles solares. Esto permite que el grabador y las cámaras sigan grabando de forma continua sin apagarse durante los cortes eléctricos.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-bold text-white flex items-center justify-between hover:bg-slate-800/40 transition-colors">
+                        <span>¿Puedo ver las cámaras en mi celular si estoy fuera del país o en Cúcuta?</span>
+                        <i class="fa-solid fa-plus text-brand-cyan text-sm transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-sm text-slate-300 border-t border-slate-800/50 pt-3">
+                        Por supuesto. Configuramos la aplicación oficial en tu teléfono (sea Android o iPhone) para que mediante conexión de datos 4G/5G o WiFi puedas conectarte en vivo, ver las grabaciones pasadas y recibir alertas desde cualquier parte del mundo.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-bold text-white flex items-center justify-between hover:bg-slate-800/40 transition-colors">
+                        <span>¿Cobran alguna mensualidad por usar la aplicación del teléfono?</span>
+                        <i class="fa-solid fa-plus text-brand-cyan text-sm transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-sm text-slate-300 border-t border-slate-800/50 pt-3">
+                        No. El acceso a la aplicación y la visualización en vivo no tienen ningún costo mensual. Tú eres el único dueño del equipo y de las grabaciones guardadas en tu disco duro o tarjeta de memoria.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left font-bold text-white flex items-center justify-between hover:bg-slate-800/40 transition-colors">
+                        <span>¿Cuánto tiempo demoran en realizar la instalación?</span>
+                        <i class="fa-solid fa-plus text-brand-cyan text-sm transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-sm text-slate-300 border-t border-slate-800/50 pt-3">
+                        La mayoría de las instalaciones residenciales estándar (de 2 a 8 cámaras) se completan en un solo día de trabajo, dejando todo ordenado, limpio y a tu entera satisfacción.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-navy-900/80 border-t border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-cyan text-xs font-bold uppercase tracking-wider">Contacto Directo</span>
+                    <h2 class="text-3xl font-extrabold text-white">¿Listo para asegurar tu tranquilidad?</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Estamos ubicados en San Cristóbal, Estado Táchira. Atendemos solicitudes residenciales, comerciales e industriales en toda la región.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        
+                        <!-- Phone / WhatsApp -->
+                        <a href="https://wa.me/584247491071" target="_blank" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-emerald-500/50 transition-all group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Atención WhatsApp 24/7</div>
+                                <div class="text-base font-bold text-white">+58 424-7491071</div>
+                            </div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/gmaurora" target="_blank" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-pink-500/50 transition-all group">
+                            <div class="w-12 h-12 rounded-lg bg-pink-500/20 border border-pink-500/40 text-pink-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Síguenos en Instagram</div>
+                                <div class="text-base font-bold text-white">@gmaurora</div>
+                            </div>
+                        </a>
+
+                        <!-- Location -->
+                        <div class="glass-card p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-brand-blue/20 border border-brand-blue/40 text-brand-cyan flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Ubicación y Cobertura</div>
+                                <div class="text-sm font-bold text-white">San Cristóbal • Táchira, Venezuela</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-8 rounded-3xl border border-slate-800 shadow-2xl">
+                        <h3 class="text-xl font-bold text-white mb-2">Envíanos un Mensaje</h3>
+                        <p class="text-xs text-slate-400 mb-6">Te responderemos a la brevedad posible con asesoría personalizada.</p>
+
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nombre Completo</label>
+                                    <input type="text" id="contact-name" required placeholder="Ej: Carlos Mendoza" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-cyan">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Sector / Zona en San Cristóbal</label>
+                                    <input type="text" id="contact-sector" required placeholder="Ej: Pueblo Nuevo / Paramillo" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-cyan">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Detalles de lo que necesitas</label>
+                                <textarea id="contact-message" rows="4" required placeholder="Ej: Requiero un kit de 4 cámaras para mi casa con batería para los cortes de luz..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-cyan"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-brand-blue to-brand-cyan hover:from-sky-500 hover:to-cyan-400 text-slate-950 font-bold text-sm rounded-xl shadow-lg shadow-cyan-500/20 transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Enviar Solicitud vía WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 border-t border-slate-900 py-10 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brand-cyan text-base"></i>
+                <span class="font-bold text-slate-300">GMAurora Seguridad & Tecnología</span>
+                <span>• San Cristóbal, Táchira</span>
+            </div>
+            <p>© <span id="year">2026</span> GMAurora. Todos los derechos reservados. Seguridad electrónica de alto nivel.</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING WIDGETS SECTION -->
+    
+    <!-- Floating Instagram Badge (Bottom Left) -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <a href="https://instagram.com/gmaurora" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white px-4 py-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 font-bold text-xs tracking-wide">
+            <i class="fa-brands fa-instagram text-xl"></i>
+            <span class="hidden sm:inline">@gmaurora</span>
+        </a>
+    </div>
+
+    <!-- Floating WhatsApp Widget (Bottom Right) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        
+        <!-- Interactive WhatsApp Greeting Card (Can be closed) -->
+        <div id="wa-card" class="glass-card p-4 rounded-2xl border border-emerald-500/40 shadow-2xl max-w-xs animate-bounce-slow">
+            <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <div class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-white text-lg font-bold">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 rounded-full border-2 border-navy-950"></span>
+                    </div>
+                    <div>
+                        <h5 class="text-xs font-bold text-white">GMAurora Asistencia</h5>
+                        <p class="text-[10px] text-slate-300">San Cristóbal • En línea</p>
+                    </div>
+                </div>
+                <button onclick="closeWaCard()" class="text-slate-400 hover:text-white text-xs p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <p class="text-xs text-slate-200 mt-2 bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+                👋 ¡Hola! ¿Buscas cámaras de seguridad para tu casa o negocio en San Cristóbal? Te asesoramos en minutos.
+            </p>
+        </div>
+
+        <!-- Main WhatsApp Action Circle Button -->
+        <a href="https://wa.me/584247491071?text=Hola%20GMAurora,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="relative group flex items-center justify-center w-16 h-16 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-full shadow-2xl shadow-emerald-500/50 hover:scale-110 transition-all duration-300 animate-pulse-slow">
+            <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
+            <span class="absolute -top-1 -right-1 w-4 h-4 bg-rose-500 rounded-full border-2 border-navy-950"></span>
+        </a>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-brand-cyan">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center space-y-4">
+            <img id="lightbox-img" src="" alt="Instalación ampliada" class="max-h-[80vh] mx-auto rounded-xl shadow-2xl border border-slate-800">
+            <p id="lightbox-caption" class="text-slate-300 text-sm font-semibold"></p>
+        </div>
+    </div>
+
+    <!-- Client JavaScript Logic -->
+    <script>
+        // Update current year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Real-time Clock for Live Camera Simulation Frame
+        function updateHeroClock() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: true });
+            const clockEl = document.getElementById('hero-clock');
+            if (clockEl) clockEl.textContent = timeStr;
+        }
+        setInterval(updateHeroClock, 1000);
+        updateHeroClock();
+
+        // Mobile Navigation Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking any nav link
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+        }
+
+        // Camera Live Sandbox Interactive Feature
+        function setCameraMode(mode) {
+            const img = document.getElementById('demo-image');
+            const nightOverlay = document.getElementById('demo-night-overlay');
+            const motionBox = document.getElementById('demo-motion-box');
+            const osdDesc = document.getElementById('demo-osd-desc');
+            const statusText = document.getElementById('demo-status-text');
+
+            // Reset buttons style
+            document.querySelectorAll('.demo-btn').forEach(btn => {
+                btn.className = "demo-btn w-full px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm flex items-center justify-between transition-all";
+            });
+
+            if (mode === 'day') {
+                document.getElementById('btn-mode-day').className = "demo-btn w-full px-4 py-3 rounded-xl bg-brand-blue text-white font-medium text-sm flex items-center justify-between transition-all shadow-lg shadow-sky-500/20";
+                img.src = "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=80";
+                nightOverlay.classList.add('opacity-0');
+                motionBox.classList.add('hidden');
+                osdDesc.innerHTML = '<i class="fa-solid fa-sun text-amber-300"></i> Vista Diurna 4K Nítida';
+                statusText.textContent = "CÁMARA EXTERIOR EN VIVO • DÍA";
+            } else if (mode === 'night') {
+                document.getElementById('btn-mode-night').className = "demo-btn w-full px-4 py-3 rounded-xl bg-brand-blue text-white font-medium text-sm flex items-center justify-between transition-all shadow-lg shadow-sky-500/20";
+                img.src = "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80";
+                nightOverlay.classList.remove('opacity-0');
+                motionBox.classList.add('hidden');
+                osdDesc.innerHTML = '<i class="fa-solid fa-moon text-indigo-400"></i> Visión Nocturna Color de Gran Alcance';
+                statusText.textContent = "CÁMARA EXTERIOR EN VIVO • NOCHE FULL COLOR";
+            } else if (mode === 'motion') {
+                document.getElementById('btn-mode-motion').className = "demo-btn w-full px-4 py-3 rounded-xl bg-brand-blue text-white font-medium text-sm flex items-center justify-between transition-all shadow-lg shadow-sky-500/20";
+                img.src = "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=80";
+                nightOverlay.classList.add('opacity-0');
+                motionBox.classList.remove('hidden');
+                osdDesc.innerHTML = '<i class="fa-solid fa-bell text-emerald-400"></i> Detección Humana IA + Sirena Activa';
+                statusText.textContent = "ALERTA DETECTADA • NOTIFICANDO AL MÓVIL";
+            }
+        }
+
+        // Budget Calculator Variables & Logic
+        let selectedPropertyText = "Casa / Residencia";
+        let selectedCamCount = 2;
+
+        function selectProperty(element, text) {
+            document.querySelectorAll('.calc-option').forEach(el => {
+                el.classList.remove('border-brand-blue');
+                el.classList.add('border-slate-800');
+            });
+            element.classList.remove('border-slate-800');
+            element.classList.add('border-brand-blue');
+            selectedPropertyText = text;
+            calculateEstimate();
+        }
+
+        function setCamCount(count, btnElement) {
+            selectedCamCount = count;
+            document.querySelectorAll('.cam-btn').forEach(b => {
+                b.classList.remove('border-brand-blue', 'text-white');
+                b.classList.add('border-slate-800', 'text-slate-300');
+            });
+            btnElement.classList.remove('border-slate-800', 'text-slate-300');
+            btnElement.classList.add('border-brand-blue', 'text-white');
+            calculateEstimate();
+        }
+
+        function calculateEstimate() {
+            let basePrice = 0;
+            if (selectedCamCount === 2) basePrice = 120;
+            else if (selectedCamCount === 4) basePrice = 220;
+            else if (selectedCamCount === 8) basePrice = 420;
+            else if (selectedCamCount === 16) basePrice = 820;
+
+            const upsIncluded = document.getElementById('ups-toggle').checked;
+            if (upsIncluded) {
+                basePrice += (selectedCamCount <= 4) ? 40 : 80;
+            }
+
+            document.getElementById('calc-price-usd').textContent = basePrice;
+        }
+
+        function sendWhatsAppQuote() {
+            const price = document.getElementById('calc-price-usd').textContent;
+            const upsState = document.getElementById('ups-toggle').checked ? "Sí (Incluido)" : "No";
+            
+            const message = `Hola GMAurora, estuve cotizando en su página web:%0A%0A` +
+                `📌 *Propiedad:* ${selectedPropertyText}%0A` +
+                `📹 *Número de Cámaras:* ${selectedCamCount}%0A` +
+                `🔋 *Respaldo Batería UPS:* ${upsState}%0A` +
+                `💰 *Presupuesto Estimado:* $${price} USD%0A%0A` +
+                `Me gustaría agendar una visita de factibilidad gratuita en San Cristóbal.`;
+
+            window.open(`https://wa.me/584247491071?text=${message}`, '_blank');
+        }
+
+        // Gallery Filter Tabs
+        function filterGallery(category, tabBtn) {
+            document.querySelectorAll('.gallery-tab').forEach(t => {
+                t.className = "gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700";
+            });
+            tabBtn.className = "gallery-tab px-4 py-2 rounded-xl text-xs font-bold bg-brand-blue text-white";
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'todos' || item.classList.contains(category)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+
+        // Lightbox Popup Viewer
+        function openLightbox(imgSrc, caption) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-caption').textContent = caption;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.className = "fa-solid fa-minus text-brand-cyan text-sm transition-transform";
+            } else {
+                content.classList.add('hidden');
+                icon.className = "fa-solid fa-plus text-brand-cyan text-sm transition-transform";
+            }
+        }
+
+        // Contact Form Direct WhatsApp Trigger
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const sector = document.getElementById('contact-sector').value;
+            const message = document.getElementById('contact-message').value;
+
+            const fullMsg = `Hola GMAurora, mi nombre es *${name}* desde el sector *${sector}* en San Cristóbal.%0A%0A` +
+                `*Consulta:* ${message}`;
+
+            window.open(`https://wa.me/584247491071?text=${fullMsg}`, '_blank');
+        }
+
+        // Close Floating WhatsApp Greeting Card
+        function closeWaCard() {
+            document.getElementById('wa-card').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
